@@ -1,0 +1,26 @@
+import pandas as pd
+
+df = pd.read_csv("C:\\Users\\badri\\OneDrive\\Desktop\\Python Basic\\pandas\\tips\\tips.csv")
+print(df)
+df1 =df.copy()
+print("this was the copied data set",df1)
+print(df1.shape)
+print(df1.size)
+print(df1.columns)
+print(df1.info())
+print(df1.head())
+print(df1.tail())
+print(df1.head(10))
+print(df1.tail(10))
+print(df1.describe())
+print(df1.describe().T)
+print(df1.isnull())
+print(df1.isnull().sum())
+print(df1.isna())
+print(df1.isna().sum())
+print(df1.columns)
+print(df1["sex"])
+df_size=df1[df1["size"]>2]
+print(df_size)
+df1_male =df1[df1["sex"]=="Male"]
+print(df1_male)
